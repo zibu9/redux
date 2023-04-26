@@ -16,7 +16,8 @@ const PostForm = () => {
       likes: 0,
     };
 
-    dispatch(addPost(postData));
+    await dispatch(addPost(postData));
+    dispatch(getPosts());
     form.current.reset();
 
   };

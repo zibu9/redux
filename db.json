@@ -23,17 +23,10 @@
     },
     {
       "author": "user42",
-      "title": "new article",
-      "content": "hello",
+      "title": "un article a editer",
+      "content": "good !",
       "likes": 0,
-      "id": "_VeaVwK"
-    },
-    {
-      "author": "user42",
-      "title": "another article",
-      "content": "un autre article",
-      "likes": 0,
-      "id": "nSVJC_b"
+      "id": "Klre-Ap"
     }
   ],
   "user": [
