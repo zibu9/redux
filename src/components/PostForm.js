@@ -9,7 +9,6 @@ const PostForm = () => {
 
   const handleForm = async (e) => {
     e.preventDefault();
-    console.log(form);
     const postData = {
       author: user.pseudo,
       title: form.current[0].value,
@@ -18,6 +17,7 @@ const PostForm = () => {
     };
 
     dispatch(addPost(postData));
+    form.current.reset();
 
   };
 
