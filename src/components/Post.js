@@ -1,22 +1,28 @@
 import React, { useState } from "react";
 import Like from "./Like";
+import { useSelector } from "react-redux";
+import { isEmpty } from "./Utils";
 
 const Post = ({ post }) => {
+  const user = useSelector((state) => state.userReducer);
   const [editToggle, setEditToggle] = useState(false);
 
   return (
     <div className="post">
-      <div className="edit-delete">
-        <img
-          src="./icons/edit.svg"
-          alt="edit"
-          onClick={() => setEditToggle(!editToggle)}
-        />
-        <img
-          src="./icons/delete.svg"
-          alt="delete"
-        />
-      </div>
+      {!isEmpty(user) && user.pseudo === post.author && (
+        <div className="edit-delete">
+          <img
+            src="./icons/edit.svg"
+            alt="edit"
+            onClick={() => setEditToggle(!editToggle)}
+          />
+          <img
+            src="./icons/delete.svg"
+            alt="delete"
+            onClick={() => {}}
+          />
+        </div>
+      )}
 
       <h2>{post.title}</h2>
       <img
